@@ -3,8 +3,8 @@ package com.main.virtualmemorymanagementsimulation;
 import java.util.Objects;
 
 public class Frame {
-    int pid;
-    int page;
+    private final int pid;
+    private final int page;
 
     public Frame(int pid, int page) {
         this.pid = pid;

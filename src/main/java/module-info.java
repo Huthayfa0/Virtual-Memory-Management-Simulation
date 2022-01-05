@@ -9,6 +9,7 @@ module com.fxml.virtualmemorymanagementsimulation {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.logging;
 
     opens com.fxml.virtualmemorymanagementsimulation to javafx.fxml;
     exports com.fxml.virtualmemorymanagementsimulation;
