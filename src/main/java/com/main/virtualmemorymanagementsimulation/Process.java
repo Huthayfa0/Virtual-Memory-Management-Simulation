@@ -58,6 +58,10 @@ public class Process implements Runnable {
         this.scheduler = scheduler;
     }
 
+    public long getEnd() {
+        return end;
+    }
+
     @Override
     public void run() {
         try {
@@ -67,6 +71,8 @@ public class Process implements Runnable {
                 lock.lock();
                 scheduler.addReadyProcess(this);
                 runCondition.await();
+                while (mmu.checkDeadLock());
+                mmu.addLock();
                 Main.getLogger().info(String.format("Process %d started.",getPid()));
                 while (scheduler.getCycles()<=runUntil&&!traces.isEmpty()){
                     mmu.requestFrame(new Frame(pid, traces.peek()),runCondition,lock);
@@ -75,6 +81,7 @@ public class Process implements Runnable {
                     traces.poll();
                     scheduler.cyclesElapsed(1);
                 }
+                mmu.releaseLock();
                 lock.unlock();
             }
             end=scheduler.getCycles();

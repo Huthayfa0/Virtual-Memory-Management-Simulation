@@ -30,8 +30,9 @@ public class Scheduler {
         Process prev=null;
         try {
             while (finishedProcesses < processes.length) {
-                loadProcesses();
+                if (mmu.checkDeadLock())continue;
                 Process process = readyQueue.take();
+                loadProcesses();
                 if (!process.equals(prev)){
                     cyclesElapsed(getContextSwitching());
                     prev=process;

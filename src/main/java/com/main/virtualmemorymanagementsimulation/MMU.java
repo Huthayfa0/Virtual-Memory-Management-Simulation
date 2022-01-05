@@ -4,19 +4,21 @@ import java.util.HashMap;
 import java.util.concurrent.*;
 import java.util.concurrent.locks.*;
 
-public class MMU extends Thread {
+public abstract class MMU extends Thread {
     private final HashMap<Integer,Integer> countPageFaults;
     private final Frame[] frames;
     private final boolean[] secondChanceClock;
     long readCycles=300;
     private final int size;
     private int i=0;
-
+    private final int minimumFrames;
+    private Integer count=0;
     private final BlockingQueue<Frame> frameQueue;
     private final BlockingQueue<Condition> conditionsQueue;
     private final BlockingQueue<Lock> locksQueue;
     private volatile Scheduler scheduler=null;
-    public MMU(int size) {
+    public MMU(int size,int minimumFrames) {
+        this.minimumFrames=minimumFrames;
         this.size=size;
         frames=new Frame[size];
         secondChanceClock=new boolean[size];
@@ -34,11 +36,35 @@ public class MMU extends Thread {
     public void setReadCycles(long readCycles) {
         this.readCycles = readCycles;
     }
-
+    public boolean checkDeadLock(){
+        synchronized (count){
+            return count * minimumFrames + minimumFrames <= size;
+        }
+    }
+    public void addLock(){
+        synchronized (count){
+            count++;
+        }
+    }
+    public void releaseLock(){
+        synchronized (count){
+            count--;
+        }
+    }
     public synchronized void requestFrame(Frame frame,Condition condition,Lock lock) throws InterruptedException {
         frameQueue.put(frame);
         conditionsQueue.put(condition);
         locksQueue.put(lock);
+    }
+    public int findReplaceableFrame(){
+        while (secondChanceClock[i]){
+            secondChanceClock[i]=false;
+            i=(i+1)%size;
+        }
+        return i;
+    }
+    public void checkIn(int i){
+        secondChanceClock[i]=true;
     }
     @Override
     public void run() {
@@ -57,17 +83,13 @@ public class MMU extends Thread {
                     }
                 }
                 if (found==-1){
-                    while (secondChanceClock[i]){
-                        secondChanceClock[i]=false;
-                        i=(i+1)%size;
-                    }
-                    found=i;
-                    frames[i]=frame;
+                    found=findReplaceableFrame();
+                    frames[found]=frame;
                     countPageFaults.compute(frame.getPid(), (k, v) -> (v == null) ? 1 : v+1);
                     scheduler.cyclesElapsed(readCycles);
                     Main.getLogger().info(String.format("MMU: Process %d Page %d loaded in frame %d.",frame.getPid(),frame.getPage(),i));
                 }
-                secondChanceClock[found]=true;
+                checkIn(found);
                 condition.signalAll();
                 lock.unlock();
             }

@@ -27,10 +27,11 @@ public class Main {
                     traces.offer(Integer.parseInt(strings[j],16));
                 }
             }
-            MMU mmu=new MMU(m);
+            MMU mmu=new ClockMMU(m,s);
             mmu.start();
             Scheduler scheduler=new Scheduler(mmu,processes);
             scheduler.start();
+            logger.info("The scheduler finished");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
