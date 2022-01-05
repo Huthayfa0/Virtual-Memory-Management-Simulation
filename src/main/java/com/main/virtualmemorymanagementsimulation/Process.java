@@ -7,6 +7,7 @@ public class Process implements Runnable {
     private final int pid;
     private final double start_time;
     private final double duration;
+    private long tracesCount=0;
     private final int size;
     private final Queue<Integer> traces;
     private volatile MMU mmu=null;
@@ -62,14 +63,18 @@ public class Process implements Runnable {
         return end;
     }
 
+    public long getTracesCount() {
+        return tracesCount;
+    }
+
     @Override
     public void run() {
         try {
+            tracesCount=traces.size();
             while (mmu == null) Thread.onSpinWait();
             while (scheduler == null) Thread.onSpinWait();
             while (!traces.isEmpty()){
                 lock.lock();
-                scheduler.addReadyProcess(this);
                 runCondition.await();
                 while (mmu.checkDeadLock());
                 mmu.addLock();
@@ -81,12 +86,19 @@ public class Process implements Runnable {
                     traces.poll();
                     scheduler.cyclesElapsed(1);
                 }
+                if (traces.isEmpty())break;
+                scheduler.addReadyProcess(this);
+                scheduler.releaseLock();
                 mmu.releaseLock();
                 lock.unlock();
+
             }
             end=scheduler.getCycles();
             Main.getLogger().info(String.format("Process %d finished at %d.",getPid(),end));
             scheduler.processFinished();
+            scheduler.releaseLock();
+            mmu.releaseLock();
+            lock.unlock();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

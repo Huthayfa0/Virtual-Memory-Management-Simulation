@@ -2,9 +2,9 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2022-01-05T16:15:20.208969793Z</date>
-  <millis>1641399320208</millis>
-  <nanos>969793</nanos>
+  <date>2022-01-05T20:18:27.076058396Z</date>
+  <millis>1641413907076</millis>
+  <nanos>58396</nanos>
   <sequence>0</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
@@ -14,9 +14,9 @@
   <message>Scheduler: Process 0 loaded at 0.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.280412025Z</date>
-  <millis>1641399320280</millis>
-  <nanos>412025</nanos>
+  <date>2022-01-05T20:18:27.135646671Z</date>
+  <millis>1641413907135</millis>
+  <nanos>646671</nanos>
   <sequence>1</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
@@ -26,22 +26,10 @@
   <message>Scheduler: Process 1 loaded at 0.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.282163578Z</date>
-  <millis>1641399320282</millis>
-  <nanos>163578</nanos>
+  <date>2022-01-05T20:18:27.137857226Z</date>
+  <millis>1641413907137</millis>
+  <nanos>857226</nanos>
   <sequence>2</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 started.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.282233046Z</date>
-  <millis>1641399320282</millis>
-  <nanos>233046</nanos>
-  <sequence>3</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -50,10 +38,10 @@
   <message>Process 0 started.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.286180824Z</date>
-  <millis>1641399320286</millis>
-  <nanos>180824</nanos>
-  <sequence>4</sequence>
+  <date>2022-01-05T20:18:27.139167514Z</date>
+  <millis>1641413907139</millis>
+  <nanos>167514</nanos>
+  <sequence>3</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -62,22 +50,22 @@
   <message>Process 0 requested page 0.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.287518033Z</date>
-  <millis>1641399320287</millis>
-  <nanos>518033</nanos>
-  <sequence>5</sequence>
+  <date>2022-01-05T20:18:27.141003512Z</date>
+  <millis>1641413907141</millis>
+  <nanos>3512</nanos>
+  <sequence>4</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
   <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 0.</message>
+  <thread>15</thread>
+  <message>MMU: Process 0 Page 0 loaded in frame 0.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.287825884Z</date>
-  <millis>1641399320287</millis>
-  <nanos>825884</nanos>
-  <sequence>6</sequence>
+  <date>2022-01-05T20:18:27.142202362Z</date>
+  <millis>1641413907142</millis>
+  <nanos>202362</nanos>
+  <sequence>5</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -86,34 +74,22 @@
   <message>Process 0 requested page 1.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.295929281Z</date>
-  <millis>1641399320295</millis>
-  <nanos>929281</nanos>
+  <date>2022-01-05T20:18:27.143394201Z</date>
+  <millis>1641413907143</millis>
+  <nanos>394201</nanos>
+  <sequence>6</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>MMU: Process 0 Page 1 loaded in frame 1.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.144767642Z</date>
+  <millis>1641413907144</millis>
+  <nanos>767642</nanos>
   <sequence>7</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
-  <method>run</method>
-  <thread>15</thread>
-  <message>MMU: Process 1 Page 0 loaded in frame 0.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.296828445Z</date>
-  <millis>1641399320296</millis>
-  <nanos>828445</nanos>
-  <sequence>8</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
-  <method>run</method>
-  <thread>15</thread>
-  <message>MMU: Process 0 Page 0 loaded in frame 1.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.298143517Z</date>
-  <millis>1641399320298</millis>
-  <nanos>143517</nanos>
-  <sequence>9</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -122,34 +98,22 @@
   <message>Process 0 requested page 2.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.303050592Z</date>
-  <millis>1641399320303</millis>
-  <nanos>50592</nanos>
-  <sequence>10</sequence>
+  <date>2022-01-05T20:18:27.145980676Z</date>
+  <millis>1641413907145</millis>
+  <nanos>980676</nanos>
+  <sequence>8</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.MMU</class>
   <method>run</method>
   <thread>15</thread>
-  <message>MMU: Process 0 Page 1 loaded in frame 2.</message>
+  <message>MMU: Process 0 Page 2 loaded in frame 2.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.304367814Z</date>
-  <millis>1641399320304</millis>
-  <nanos>367814</nanos>
-  <sequence>11</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 1.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.304568294Z</date>
-  <millis>1641399320304</millis>
-  <nanos>568294</nanos>
-  <sequence>12</sequence>
+  <date>2022-01-05T20:18:27.147150957Z</date>
+  <millis>1641413907147</millis>
+  <nanos>150957</nanos>
+  <sequence>9</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -158,46 +122,22 @@
   <message>Process 0 requested page 3.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.314887775Z</date>
-  <millis>1641399320314</millis>
-  <nanos>887775</nanos>
-  <sequence>13</sequence>
+  <date>2022-01-05T20:18:27.148302619Z</date>
+  <millis>1641413907148</millis>
+  <nanos>302619</nanos>
+  <sequence>10</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.MMU</class>
   <method>run</method>
   <thread>15</thread>
-  <message>MMU: Process 0 Page 2 loaded in frame 3.</message>
+  <message>MMU: Process 0 Page 3 loaded in frame 3.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.316328400Z</date>
-  <millis>1641399320316</millis>
-  <nanos>328400</nanos>
-  <sequence>14</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
-  <method>run</method>
-  <thread>15</thread>
-  <message>MMU: Process 1 Page 1 loaded in frame 4.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.318243809Z</date>
-  <millis>1641399320318</millis>
-  <nanos>243809</nanos>
-  <sequence>15</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 started.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.318473531Z</date>
-  <millis>1641399320318</millis>
-  <nanos>473531</nanos>
-  <sequence>16</sequence>
+  <date>2022-01-05T20:18:27.149482430Z</date>
+  <millis>1641413907149</millis>
+  <nanos>482430</nanos>
+  <sequence>11</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -206,22 +146,58 @@
   <message>Process 1 started.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.319493167Z</date>
-  <millis>1641399320319</millis>
-  <nanos>493167</nanos>
-  <sequence>17</sequence>
+  <date>2022-01-05T20:18:27.150501737Z</date>
+  <millis>1641413907150</millis>
+  <nanos>501737</nanos>
+  <sequence>12</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 requested page 4.</message>
+  <thread>17</thread>
+  <message>Process 1 requested page 0.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.329076513Z</date>
-  <millis>1641399320329</millis>
-  <nanos>76513</nanos>
-  <sequence>18</sequence>
+  <date>2022-01-05T20:18:27.151401464Z</date>
+  <millis>1641413907151</millis>
+  <nanos>401464</nanos>
+  <sequence>13</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>MMU: Process 1 Page 0 loaded in frame 4.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.152368758Z</date>
+  <millis>1641413907152</millis>
+  <nanos>368758</nanos>
+  <sequence>14</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 1.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.153356707Z</date>
+  <millis>1641413907153</millis>
+  <nanos>356707</nanos>
+  <sequence>15</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>MMU: Process 1 Page 1 loaded in frame 5.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.163438931Z</date>
+  <millis>1641413907163</millis>
+  <nanos>438931</nanos>
+  <sequence>16</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -230,70 +206,22 @@
   <message>Process 1 requested page 2.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.332491644Z</date>
-  <millis>1641399320332</millis>
-  <nanos>491644</nanos>
-  <sequence>19</sequence>
+  <date>2022-01-05T20:18:27.164653773Z</date>
+  <millis>1641413907164</millis>
+  <nanos>653773</nanos>
+  <sequence>17</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.MMU</class>
   <method>run</method>
   <thread>15</thread>
-  <message>MMU: Process 0 Page 3 loaded in frame 5.</message>
+  <message>MMU: Process 1 Page 2 loaded in frame 6.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.336265128Z</date>
-  <millis>1641399320336</millis>
-  <nanos>265128</nanos>
-  <sequence>20</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 requested page 5.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.337239947Z</date>
-  <millis>1641399320337</millis>
-  <nanos>239947</nanos>
-  <sequence>21</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
-  <method>run</method>
-  <thread>15</thread>
-  <message>MMU: Process 0 Page 4 loaded in frame 6.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.338682255Z</date>
-  <millis>1641399320338</millis>
-  <nanos>682255</nanos>
-  <sequence>22</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 requested page 1.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.338682235Z</date>
-  <millis>1641399320338</millis>
-  <nanos>682235</nanos>
-  <sequence>23</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
-  <method>run</method>
-  <thread>15</thread>
-  <message>MMU: Process 1 Page 2 loaded in frame 7.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.344133973Z</date>
-  <millis>1641399320344</millis>
-  <nanos>133973</nanos>
-  <sequence>24</sequence>
+  <date>2022-01-05T20:18:27.165584724Z</date>
+  <millis>1641413907165</millis>
+  <nanos>584724</nanos>
+  <sequence>18</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -302,22 +230,22 @@
   <message>Process 1 requested page 3.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.349602880Z</date>
-  <millis>1641399320349</millis>
-  <nanos>602880</nanos>
-  <sequence>25</sequence>
+  <date>2022-01-05T20:18:27.166509627Z</date>
+  <millis>1641413907166</millis>
+  <nanos>509627</nanos>
+  <sequence>19</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.MMU</class>
   <method>run</method>
   <thread>15</thread>
-  <message>MMU: Process 0 Page 5 loaded in frame 8.</message>
+  <message>MMU: Process 1 Page 3 loaded in frame 7.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.353596037Z</date>
-  <millis>1641399320353</millis>
-  <nanos>596037</nanos>
-  <sequence>26</sequence>
+  <date>2022-01-05T20:18:27.167411945Z</date>
+  <millis>1641413907167</millis>
+  <nanos>411945</nanos>
+  <sequence>20</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -326,22 +254,70 @@
   <message>Process 0 started.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.354709444Z</date>
-  <millis>1641399320354</millis>
-  <nanos>709444</nanos>
-  <sequence>27</sequence>
+  <date>2022-01-05T20:18:27.168266349Z</date>
+  <millis>1641413907168</millis>
+  <nanos>266349</nanos>
+  <sequence>21</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>Process 0 requested page 4.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.171154817Z</date>
+  <millis>1641413907171</millis>
+  <nanos>154817</nanos>
+  <sequence>22</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.MMU</class>
   <method>run</method>
   <thread>15</thread>
-  <message>MMU: Process 1 Page 3 loaded in frame 9.</message>
+  <message>MMU: Process 0 Page 4 loaded in frame 8.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.357030190Z</date>
-  <millis>1641399320357</millis>
-  <nanos>30190</nanos>
-  <sequence>28</sequence>
+  <date>2022-01-05T20:18:27.172226869Z</date>
+  <millis>1641413907172</millis>
+  <nanos>226869</nanos>
+  <sequence>23</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>Process 0 requested page 5.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.173149192Z</date>
+  <millis>1641413907173</millis>
+  <nanos>149192</nanos>
+  <sequence>24</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>MMU: Process 0 Page 5 loaded in frame 9.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.174060673Z</date>
+  <millis>1641413907174</millis>
+  <nanos>60673</nanos>
+  <sequence>25</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>Process 0 requested page 1.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.174979771Z</date>
+  <millis>1641413907174</millis>
+  <nanos>979771</nanos>
+  <sequence>26</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -350,33 +326,57 @@
   <message>Process 0 requested page 2.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.358064032Z</date>
-  <millis>1641399320358</millis>
-  <nanos>64032</nanos>
+  <date>2022-01-05T20:18:27.176051286Z</date>
+  <millis>1641413907176</millis>
+  <nanos>51286</nanos>
+  <sequence>27</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>Process 0 requested page 3.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.176959956Z</date>
+  <millis>1641413907176</millis>
+  <nanos>959956</nanos>
+  <sequence>28</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>Process 0 requested page 4.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.177857739Z</date>
+  <millis>1641413907177</millis>
+  <nanos>857739</nanos>
   <sequence>29</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 started.</message>
+  <thread>16</thread>
+  <message>Process 0 requested page 1.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.361160703Z</date>
-  <millis>1641399320361</millis>
-  <nanos>160703</nanos>
+  <date>2022-01-05T20:18:27.179084159Z</date>
+  <millis>1641413907179</millis>
+  <nanos>84159</nanos>
   <sequence>30</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 4.</message>
+  <thread>16</thread>
+  <message>Process 0 requested page 2.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.367725264Z</date>
-  <millis>1641399320367</millis>
-  <nanos>725264</nanos>
+  <date>2022-01-05T20:18:27.180028055Z</date>
+  <millis>1641413907180</millis>
+  <nanos>28055</nanos>
   <sequence>31</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
@@ -386,69 +386,69 @@
   <message>Process 0 requested page 3.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.367757436Z</date>
-  <millis>1641399320367</millis>
-  <nanos>757436</nanos>
+  <date>2022-01-05T20:18:27.180917210Z</date>
+  <millis>1641413907180</millis>
+  <nanos>917210</nanos>
   <sequence>32</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
-  <thread>15</thread>
-  <message>MMU: Process 1 Page 4 loaded in frame 10.</message>
+  <thread>16</thread>
+  <message>Process 0 requested page 1.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.381345480Z</date>
-  <millis>1641399320381</millis>
-  <nanos>345480</nanos>
+  <date>2022-01-05T20:18:27.183241851Z</date>
+  <millis>1641413907183</millis>
+  <nanos>241851</nanos>
   <sequence>33</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 5.</message>
+  <thread>16</thread>
+  <message>Process 0 requested page 2.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.383934389Z</date>
-  <millis>1641399320383</millis>
-  <nanos>934389</nanos>
+  <date>2022-01-05T20:18:27.184156840Z</date>
+  <millis>1641413907184</millis>
+  <nanos>156840</nanos>
   <sequence>34</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
   <thread>16</thread>
-  <message>Process 0 requested page 4.</message>
+  <message>Process 0 requested page 3.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.386655755Z</date>
-  <millis>1641399320386</millis>
-  <nanos>655755</nanos>
+  <date>2022-01-05T20:18:27.185915131Z</date>
+  <millis>1641413907185</millis>
+  <nanos>915131</nanos>
   <sequence>35</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
-  <thread>15</thread>
-  <message>MMU: Process 1 Page 5 loaded in frame 11.</message>
+  <thread>16</thread>
+  <message>Process 0 requested page 1.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.388955927Z</date>
-  <millis>1641399320388</millis>
-  <nanos>955927</nanos>
+  <date>2022-01-05T20:18:27.186840008Z</date>
+  <millis>1641413907186</millis>
+  <nanos>840008</nanos>
   <sequence>36</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 1.</message>
+  <thread>16</thread>
+  <message>Process 0 requested page 2.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.389830193Z</date>
-  <millis>1641399320389</millis>
-  <nanos>830193</nanos>
+  <date>2022-01-05T20:18:27.187722399Z</date>
+  <millis>1641413907187</millis>
+  <nanos>722399</nanos>
   <sequence>37</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
@@ -458,226 +458,46 @@
   <message>Process 0 requested page 1.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.393165246Z</date>
-  <millis>1641399320393</millis>
-  <nanos>165246</nanos>
+  <date>2022-01-05T20:18:27.188660514Z</date>
+  <millis>1641413907188</millis>
+  <nanos>660514</nanos>
   <sequence>38</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 2.</message>
+  <thread>16</thread>
+  <message>Process 0 requested page 2.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.393714345Z</date>
-  <millis>1641399320393</millis>
-  <nanos>714345</nanos>
+  <date>2022-01-05T20:18:27.189611023Z</date>
+  <millis>1641413907189</millis>
+  <nanos>611023</nanos>
   <sequence>39</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
   <thread>16</thread>
-  <message>Process 0 requested page 2.</message>
+  <message>Process 0 requested page 1.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.397244046Z</date>
-  <millis>1641399320397</millis>
-  <nanos>244046</nanos>
+  <date>2022-01-05T20:18:27.190518679Z</date>
+  <millis>1641413907190</millis>
+  <nanos>518679</nanos>
   <sequence>40</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
   <thread>16</thread>
-  <message>Process 0 requested page 3.</message>
+  <message>Process 0 requested page 2.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.401962471Z</date>
-  <millis>1641399320401</millis>
-  <nanos>962471</nanos>
+  <date>2022-01-05T20:18:27.191404610Z</date>
+  <millis>1641413907191</millis>
+  <nanos>404610</nanos>
   <sequence>41</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 3.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.409225409Z</date>
-  <millis>1641399320409</millis>
-  <nanos>225409</nanos>
-  <sequence>42</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 4.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.413509756Z</date>
-  <millis>1641399320413</millis>
-  <nanos>509756</nanos>
-  <sequence>43</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 1.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.413565455Z</date>
-  <millis>1641399320413</millis>
-  <nanos>565455</nanos>
-  <sequence>44</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 requested page 1.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.416188731Z</date>
-  <millis>1641399320416</millis>
-  <nanos>188731</nanos>
-  <sequence>45</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 requested page 2.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.419091516Z</date>
-  <millis>1641399320419</millis>
-  <nanos>91516</nanos>
-  <sequence>46</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 requested page 3.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.419582635Z</date>
-  <millis>1641399320419</millis>
-  <nanos>582635</nanos>
-  <sequence>47</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 2.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.425512838Z</date>
-  <millis>1641399320425</millis>
-  <nanos>512838</nanos>
-  <sequence>48</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 requested page 1.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.428905756Z</date>
-  <millis>1641399320428</millis>
-  <nanos>905756</nanos>
-  <sequence>49</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 3.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.429274442Z</date>
-  <millis>1641399320429</millis>
-  <nanos>274442</nanos>
-  <sequence>50</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 requested page 2.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.430701372Z</date>
-  <millis>1641399320430</millis>
-  <nanos>701372</nanos>
-  <sequence>51</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 requested page 1.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.432343129Z</date>
-  <millis>1641399320432</millis>
-  <nanos>343129</nanos>
-  <sequence>52</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 requested page 2.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.434695794Z</date>
-  <millis>1641399320434</millis>
-  <nanos>695794</nanos>
-  <sequence>53</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 1.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.436326677Z</date>
-  <millis>1641399320436</millis>
-  <nanos>326677</nanos>
-  <sequence>54</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 requested page 1.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.440047943Z</date>
-  <millis>1641399320440</millis>
-  <nanos>47943</nanos>
-  <sequence>55</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>16</thread>
-  <message>Process 0 requested page 2.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.441207417Z</date>
-  <millis>1641399320441</millis>
-  <nanos>207417</nanos>
-  <sequence>56</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -686,22 +506,10 @@
   <message>Process 0 requested page 5.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.441467480Z</date>
-  <millis>1641399320441</millis>
-  <nanos>467480</nanos>
-  <sequence>57</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 2.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.442307079Z</date>
-  <millis>1641399320442</millis>
-  <nanos>307079</nanos>
-  <sequence>58</sequence>
+  <date>2022-01-05T20:18:27.192244447Z</date>
+  <millis>1641413907192</millis>
+  <nanos>244447</nanos>
+  <sequence>42</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -710,34 +518,118 @@
   <message>Process 0 requested page 9.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.445826753Z</date>
-  <millis>1641399320445</millis>
-  <nanos>826753</nanos>
-  <sequence>59</sequence>
+  <date>2022-01-05T20:18:27.193050132Z</date>
+  <millis>1641413907193</millis>
+  <nanos>50132</nanos>
+  <sequence>43</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.MMU</class>
   <method>run</method>
   <thread>15</thread>
-  <message>MMU: Process 0 Page 9 loaded in frame 12.</message>
+  <message>MMU: Process 0 Page 9 loaded in frame 10.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.447240461Z</date>
-  <millis>1641399320447</millis>
-  <nanos>240461</nanos>
-  <sequence>60</sequence>
+  <date>2022-01-05T20:18:27.193740530Z</date>
+  <millis>1641413907193</millis>
+  <nanos>740530</nanos>
+  <sequence>44</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
   <thread>16</thread>
-  <message>Process 0 finished at 3978.</message>
+  <message>Process 0 finished at 3343.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.447253890Z</date>
-  <millis>1641399320447</millis>
-  <nanos>253890</nanos>
-  <sequence>61</sequence>
+  <date>2022-01-05T20:18:27.194398507Z</date>
+  <millis>1641413907194</millis>
+  <nanos>398507</nanos>
+  <sequence>45</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 started.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.195100638Z</date>
+  <millis>1641413907195</millis>
+  <nanos>100638</nanos>
+  <sequence>46</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 4.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.195848600Z</date>
+  <millis>1641413907195</millis>
+  <nanos>848600</nanos>
+  <sequence>47</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>MMU: Process 1 Page 4 loaded in frame 11.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.196751551Z</date>
+  <millis>1641413907196</millis>
+  <nanos>751551</nanos>
+  <sequence>48</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 5.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.197590615Z</date>
+  <millis>1641413907197</millis>
+  <nanos>590615</nanos>
+  <sequence>49</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.MMU</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>MMU: Process 1 Page 5 loaded in frame 12.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.198435525Z</date>
+  <millis>1641413907198</millis>
+  <nanos>435525</nanos>
+  <sequence>50</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 1.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.199395286Z</date>
+  <millis>1641413907199</millis>
+  <nanos>395286</nanos>
+  <sequence>51</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 2.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.200340556Z</date>
+  <millis>1641413907200</millis>
+  <nanos>340556</nanos>
+  <sequence>52</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -746,9 +638,117 @@
   <message>Process 1 requested page 3.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.448750129Z</date>
-  <millis>1641399320448</millis>
-  <nanos>750129</nanos>
+  <date>2022-01-05T20:18:27.201228798Z</date>
+  <millis>1641413907201</millis>
+  <nanos>228798</nanos>
+  <sequence>53</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 4.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.202089091Z</date>
+  <millis>1641413907202</millis>
+  <nanos>89091</nanos>
+  <sequence>54</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 1.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.202755454Z</date>
+  <millis>1641413907202</millis>
+  <nanos>755454</nanos>
+  <sequence>55</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 2.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.203277494Z</date>
+  <millis>1641413907203</millis>
+  <nanos>277494</nanos>
+  <sequence>56</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 3.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.203763312Z</date>
+  <millis>1641413907203</millis>
+  <nanos>763312</nanos>
+  <sequence>57</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 1.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.204443871Z</date>
+  <millis>1641413907204</millis>
+  <nanos>443871</nanos>
+  <sequence>58</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 2.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.205299448Z</date>
+  <millis>1641413907205</millis>
+  <nanos>299448</nanos>
+  <sequence>59</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 3.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.206110161Z</date>
+  <millis>1641413907206</millis>
+  <nanos>110161</nanos>
+  <sequence>60</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 1.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.207048841Z</date>
+  <millis>1641413907207</millis>
+  <nanos>48841</nanos>
+  <sequence>61</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Process</class>
+  <method>run</method>
+  <thread>17</thread>
+  <message>Process 1 requested page 2.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.207915110Z</date>
+  <millis>1641413907207</millis>
+  <nanos>915110</nanos>
   <sequence>62</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
@@ -758,9 +758,9 @@
   <message>Process 1 requested page 1.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.456311805Z</date>
-  <millis>1641399320456</millis>
-  <nanos>311805</nanos>
+  <date>2022-01-05T20:18:27.212849309Z</date>
+  <millis>1641413907212</millis>
+  <nanos>849309</nanos>
   <sequence>63</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
@@ -770,9 +770,9 @@
   <message>Process 1 requested page 2.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.457252298Z</date>
-  <millis>1641399320457</millis>
-  <nanos>252298</nanos>
+  <date>2022-01-05T20:18:27.213908453Z</date>
+  <millis>1641413907213</millis>
+  <nanos>908453</nanos>
   <sequence>64</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
@@ -782,9 +782,9 @@
   <message>Process 1 requested page 1.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.458352207Z</date>
-  <millis>1641399320458</millis>
-  <nanos>352207</nanos>
+  <date>2022-01-05T20:18:27.214693613Z</date>
+  <millis>1641413907214</millis>
+  <nanos>693613</nanos>
   <sequence>65</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
@@ -794,34 +794,10 @@
   <message>Process 1 requested page 2.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.459267462Z</date>
-  <millis>1641399320459</millis>
-  <nanos>267462</nanos>
+  <date>2022-01-05T20:18:27.215439153Z</date>
+  <millis>1641413907215</millis>
+  <nanos>439153</nanos>
   <sequence>66</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 1.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.460224894Z</date>
-  <millis>1641399320460</millis>
-  <nanos>224894</nanos>
-  <sequence>67</sequence>
-  <logger>com.main.virtualmemorymanagementsimulation</logger>
-  <level>INFO</level>
-  <class>com.main.virtualmemorymanagementsimulation.Process</class>
-  <method>run</method>
-  <thread>17</thread>
-  <message>Process 1 requested page 2.</message>
-</record>
-<record>
-  <date>2022-01-05T16:15:20.461109317Z</date>
-  <millis>1641399320461</millis>
-  <nanos>109317</nanos>
-  <sequence>68</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -830,10 +806,10 @@
   <message>Process 1 requested page 5.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.462255644Z</date>
-  <millis>1641399320462</millis>
-  <nanos>255644</nanos>
-  <sequence>69</sequence>
+  <date>2022-01-05T20:18:27.216149050Z</date>
+  <millis>1641413907216</millis>
+  <nanos>149050</nanos>
+  <sequence>67</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
@@ -842,10 +818,10 @@
   <message>Process 1 requested page 9.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.463923568Z</date>
-  <millis>1641399320463</millis>
-  <nanos>923568</nanos>
-  <sequence>70</sequence>
+  <date>2022-01-05T20:18:27.216846087Z</date>
+  <millis>1641413907216</millis>
+  <nanos>846087</nanos>
+  <sequence>68</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.MMU</class>
@@ -854,14 +830,75 @@
   <message>MMU: Process 1 Page 9 loaded in frame 13.</message>
 </record>
 <record>
-  <date>2022-01-05T16:15:20.465326822Z</date>
-  <millis>1641399320465</millis>
-  <nanos>326822</nanos>
-  <sequence>71</sequence>
+  <date>2022-01-05T20:18:27.217865958Z</date>
+  <millis>1641413907217</millis>
+  <nanos>865958</nanos>
+  <sequence>69</sequence>
   <logger>com.main.virtualmemorymanagementsimulation</logger>
   <level>INFO</level>
   <class>com.main.virtualmemorymanagementsimulation.Process</class>
   <method>run</method>
   <thread>17</thread>
-  <message>Process 1 finished at 4288.</message>
+  <message>Process 1 finished at 4268.</message>
 </record>
+<record>
+  <date>2022-01-05T20:18:27.219249336Z</date>
+  <millis>1641413907219</millis>
+  <nanos>249336</nanos>
+  <sequence>70</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Scheduler</class>
+  <method>start</method>
+  <thread>1</thread>
+  <message>Scheduler finished.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.220011788Z</date>
+  <millis>1641413907220</millis>
+  <nanos>11788</nanos>
+  <sequence>71</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Process 0 took cycles 3367.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.220661792Z</date>
+  <millis>1641413907220</millis>
+  <nanos>661792</nanos>
+  <sequence>72</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Process 1 took cycles 4292.</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.222387301Z</date>
+  <millis>1641413907222</millis>
+  <nanos>387301</nanos>
+  <sequence>73</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Main</class>
+  <method>lambda$main$0</method>
+  <thread>1</thread>
+  <message>Process 0 had 7 page faults</message>
+</record>
+<record>
+  <date>2022-01-05T20:18:27.224372377Z</date>
+  <millis>1641413907224</millis>
+  <nanos>372377</nanos>
+  <sequence>74</sequence>
+  <logger>com.main.virtualmemorymanagementsimulation</logger>
+  <level>INFO</level>
+  <class>com.main.virtualmemorymanagementsimulation.Main</class>
+  <method>lambda$main$0</method>
+  <thread>1</thread>
+  <message>Process 1 had 7 page faults</message>
+</record>
+</log>

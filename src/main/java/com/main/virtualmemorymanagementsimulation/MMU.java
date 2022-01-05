@@ -7,10 +7,8 @@ import java.util.concurrent.locks.*;
 public abstract class MMU extends Thread {
     private final HashMap<Integer,Integer> countPageFaults;
     private final Frame[] frames;
-    private final boolean[] secondChanceClock;
     long readCycles=300;
-    private final int size;
-    private int i=0;
+    protected final int size;
     private final int minimumFrames;
     private Integer count=0;
     private final BlockingQueue<Frame> frameQueue;
@@ -21,7 +19,6 @@ public abstract class MMU extends Thread {
         this.minimumFrames=minimumFrames;
         this.size=size;
         frames=new Frame[size];
-        secondChanceClock=new boolean[size];
         frameQueue=new LinkedBlockingQueue<>();
         conditionsQueue=new LinkedBlockingQueue<>();
         locksQueue=new LinkedBlockingQueue<>();
@@ -38,7 +35,7 @@ public abstract class MMU extends Thread {
     }
     public boolean checkDeadLock(){
         synchronized (count){
-            return count * minimumFrames + minimumFrames <= size;
+            return count * minimumFrames + minimumFrames > size;
         }
     }
     public void addLock(){
@@ -56,16 +53,11 @@ public abstract class MMU extends Thread {
         conditionsQueue.put(condition);
         locksQueue.put(lock);
     }
-    public int findReplaceableFrame(){
-        while (secondChanceClock[i]){
-            secondChanceClock[i]=false;
-            i=(i+1)%size;
-        }
-        return i;
+
+    public HashMap<Integer, Integer> getCountPageFaults() {
+        return countPageFaults;
     }
-    public void checkIn(int i){
-        secondChanceClock[i]=true;
-    }
+
     @Override
     public void run() {
         try {
@@ -83,11 +75,11 @@ public abstract class MMU extends Thread {
                     }
                 }
                 if (found==-1){
-                    found=findReplaceableFrame();
+                    found= findFillInFrame();
                     frames[found]=frame;
                     countPageFaults.compute(frame.getPid(), (k, v) -> (v == null) ? 1 : v+1);
                     scheduler.cyclesElapsed(readCycles);
-                    Main.getLogger().info(String.format("MMU: Process %d Page %d loaded in frame %d.",frame.getPid(),frame.getPage(),i));
+                    Main.getLogger().info(String.format("MMU: Process %d Page %d loaded in frame %d.",frame.getPid(),frame.getPage(),found));
                 }
                 checkIn(found);
                 condition.signalAll();
@@ -97,5 +89,9 @@ public abstract class MMU extends Thread {
             e.printStackTrace();
         }
     }
+
+    protected abstract void checkIn(int found);
+
+    protected abstract int findFillInFrame();
 
 }

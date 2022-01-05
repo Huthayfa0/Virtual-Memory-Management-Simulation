@@ -2,8 +2,11 @@ package com.main.virtualmemorymanagementsimulation;
 
 import java.util.*;
 import java.util.concurrent.*;
+import java.util.concurrent.locks.*;
 
 public class Scheduler {
+    private Lock lock=new ReentrantLock(true);
+    private Condition condition=lock.newCondition();
     private long cycles=0;
     private long timeQuantumInCycles=1000;
     private int contextSwitching=5;
@@ -30,19 +33,24 @@ public class Scheduler {
         Process prev=null;
         try {
             while (finishedProcesses < processes.length) {
+                loadProcesses();
+                lock.lock();
                 if (mmu.checkDeadLock())continue;
                 Process process = readyQueue.take();
-                loadProcesses();
+
                 if (!process.equals(prev)){
                     cyclesElapsed(getContextSwitching());
                     prev=process;
                 }
                 process.setRunUntil(cycles+getTimeQuantumInCycles());
-
+                condition.await();
+                lock.unlock();
             }
+            Main.getLogger().info("Scheduler finished.");
         }catch (InterruptedException e){
             e.printStackTrace();
         }
+
     }
 
     private void loadProcesses() {
@@ -102,7 +110,11 @@ public class Scheduler {
             e.printStackTrace();
         }
     }
-
+    public void releaseLock(){
+        lock.lock();
+        condition.signalAll();
+        lock.unlock();
+    }
     public synchronized void cyclesElapsed(long cycles) {
         if (cycles<0)return;
         this.cycles += cycles;

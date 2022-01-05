@@ -31,7 +31,11 @@ public class Main {
             mmu.start();
             Scheduler scheduler=new Scheduler(mmu,processes);
             scheduler.start();
-            logger.info("The scheduler finished");
+            for (Process process:processes){
+                logger.info(String.format("Process %d took cycles %d.",process.getPid(),process.getEnd()-(long)(process.getStart_time()*360*scheduler.getCycles()-process.getTracesCount())));
+            }
+            mmu.getCountPageFaults().forEach((u,v)->logger.info(String.format("Process %d had %d page faults",u,v)));
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
