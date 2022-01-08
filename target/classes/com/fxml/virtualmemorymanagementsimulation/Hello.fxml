@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fxml.virtualmemorymanagementsimulation.HelloController">
+    <top>
+        <Pane prefHeight="140.0" prefWidth="1134.0" style="-fx-background-color: #0065FD;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="117.0" fitWidth="99.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/270566861_659903538699059_2987583317963076765_n.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="132.0" layoutY="40.0" text="Virtual" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+                <Label layoutX="241.0" layoutY="40.0" text="Memory" textFill="#df0000">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+            </children></Pane>
+    </top>
+    <center>
+        <Pane prefHeight="480.0" prefWidth="916.0" BorderPane.alignment="CENTER">
+            <children>
+                <Pane layoutX="14.0" layoutY="14.0" prefHeight="457.0" prefWidth="305.0" style="-fx-border-color: #000000;">
+                    <children>
+                        <TextField fx:id="BrowseTextField" layoutX="108.0" layoutY="14.0" prefHeight="26.0" prefWidth="184.0" promptText="please insert the path of the file" styleClass="tf2_box" stylesheets="@style.css" />
+                        <Label layoutX="10.0" layoutY="81.0" text="don't know the path? then" />
+                        <Button fx:id="Browse" layoutX="200.0" layoutY="77.0" mnemonicParsing="false" onAction="#onBrowseButtonClick" prefHeight="25.0" prefWidth="79.0" stylesheets="@buttons.css" text="Browse" />
+                        <Label layoutX="10.0" layoutY="146.0" text="please insert the Time Quantaum" />
+                        <TextField fx:id="Time" layoutX="191.0" layoutY="142.0" prefHeight="26.0" prefWidth="84.0" styleClass="tf2_box" stylesheets="@style.css" />
+                        <TextField fx:id="Memorysize" alignment="CENTER" layoutX="165.0" layoutY="213.0" prefHeight="26.0" prefWidth="108.0" promptText="Memory size" styleClass="tf2_box" stylesheets="@style.css" />
+                        <Button layoutX="80.0" layoutY="422.0" mnemonicParsing="false" onAction="#onReadButtonClick" stylesheets="@buttons.css" text="Run the program" />
+                        <Label layoutX="47.0" layoutY="296.0" text="please choose one of the algorithms" />
+                        <RadioButton fx:id="fifo" layoutX="36.0" layoutY="332.0" mnemonicParsing="false" text="FIFO">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="algo" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="Second_chanceFIFO" layoutX="168.0" layoutY="332.0" mnemonicParsing="false" text="Second-chance FIFO" toggleGroup="$algo" />
+                        <RadioButton fx:id="LRU" layoutX="37.0" layoutY="373.0" mnemonicParsing="false" text="LRU" toggleGroup="$algo" />
+                        <RadioButton fx:id="Clock" layoutX="168.0" layoutY="373.0" mnemonicParsing="false" text="Clock" toggleGroup="$algo" />
+                        <TextField fx:id="minmumFramesProcess" alignment="CENTER" layoutX="29.0" layoutY="213.0" prefHeight="26.0" prefWidth="102.0" promptText="MinimumFrames" styleClass="tf2_box" stylesheets="@style.css" />
+                        <Label layoutX="31.0" layoutY="190.0" prefHeight="17.0" prefWidth="99.0" text="MinimumFrames" />
+                        <Label layoutX="182.0" layoutY="190.0" prefHeight="17.0" prefWidth="75.0" text="MemorySize" />
+                        <TextField fx:id="NumberOfProcesses1" alignment="CENTER" layoutX="140.0" layoutY="263.0" prefHeight="26.0" prefWidth="112.0" promptText="NumberOfProcess" styleClass="tf2_box" stylesheets="@style.css" />
+                        <Label layoutX="11.0" layoutY="268.0" prefHeight="17.0" prefWidth="118.0" text="NumberOfProcesses" />
+                  <Label layoutX="18.0" layoutY="19.0" prefHeight="17.0" prefWidth="80.0" text="Insert Path" />
+                    </children>
+                </Pane>
+                <Label layoutX="552.0" layoutY="14.0" text="Process information">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="result" layoutX="347.0" layoutY="59.0" prefHeight="340.0" prefWidth="619.0" stylesheets="@tables.css">
+                    <columns>
+                        <TableColumn fx:id="PID" prefWidth="75.0" text="PID" />
+                        <TableColumn fx:id="NumberOfFaultsT" prefWidth="123.20001220703125" text="Number of faults" />
+                        <TableColumn  fx:id="arrival" prefWidth="75.0" text="arrival" />
+                        <TableColumn fx:id="completion" prefWidth="75.0" text="completion" />
+                        <TableColumn fx:id="TurnAround" prefWidth="101.5999755859375" text="Turn Around" />
+                        <TableColumn fx:id="WaitingTime" prefWidth="75.0" text="Waiting Time" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <Label layoutX="347.0" layoutY="436.0" text="Click here to check the Memory view" textFill="#e42929">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <Button layoutX="631.0" layoutY="430.0" mnemonicParsing="false" onAction="#onMemoryViewClick" prefHeight="37.0" prefWidth="105.0" stylesheets="@buttons.css" text="Memory View" />
+            </children>
+        </Pane>
+    </center>
+</BorderPane>

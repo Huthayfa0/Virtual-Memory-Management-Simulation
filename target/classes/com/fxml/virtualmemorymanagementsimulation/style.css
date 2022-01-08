@@ -1,0 +1,19 @@
+
+
+.bcg1{
+    -fx-height: 100%;
+    -fx-margin: 0;
+    -fx-background: #162944;
+}
+
+.tf_box{
+    -fx-background-color: transparent;
+    -fx-border-color: #FFFF;
+    -fx-border-width: 0px 0px 1px 0px;
+}
+
+.tf2_box{
+    -fx-background-color: transparent;
+    -fx-border-color: #73A3EF;
+    -fx-border-width: 0px 0px 1px 0px;
+}
