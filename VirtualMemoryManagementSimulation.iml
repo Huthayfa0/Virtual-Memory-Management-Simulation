@@ -11,13 +11,13 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:16" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:linux:16" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:win:16" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:16" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:linux:16" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:win:16" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-web:16" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-web:linux:16" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-web:win:16" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-media:16" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-media:linux:16" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-media:win:16" level="project" />
     <orderEntry type="library" name="Maven: org.controlsfx:controlsfx:11.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.dlsc.formsfx:formsfx-core:11.3.2" level="project" />
     <orderEntry type="library" name="Maven: net.synedra:validatorfx:0.1.13" level="project" />
@@ -32,9 +32,9 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.7.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.7.1" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:16" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:linux:16" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:win:16" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:16" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:linux:16" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:win:16" level="project" />
     <orderEntry type="library" name="Maven: io.hoplin:logreader:1.1.5" level="project" />
     <orderEntry type="library" name="Maven: io.hoplin:hoplin-client:1.1.5" level="project" />
     <orderEntry type="library" name="Maven: com.rabbitmq:amqp-client:5.8.0" level="project" />

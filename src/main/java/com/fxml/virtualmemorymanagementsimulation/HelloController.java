@@ -96,8 +96,6 @@ public class HelloController implements Initializable {
             if (fifo.isSelected()){
                 Main.read(BrowseTextField.getText(),"FIFOMMU");
                 observableListResult.addAll(TableViewData.read());
-
-
             }else if (Second_chanceFIFO.isSelected()){
                 Main.read(BrowseTextField.getText(),"SecondChanceFIFOMMU");
                 observableListResult.addAll(TableViewData.read());

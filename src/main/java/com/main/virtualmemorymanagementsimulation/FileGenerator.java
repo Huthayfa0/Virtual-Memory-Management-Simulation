@@ -9,7 +9,7 @@ public class FileGenerator {
     public FileGenerator(String fileName) throws IOException {
         PrintWriter printWriter=new PrintWriter(new FileWriter("src/main/resources/"+fileName));
         Random random=new Random();
-        int n=random.nextInt(20)+1;
+        int n=4;
         int m=20;
         int s= random.nextInt(10)+1;
         printWriter.println(n);
@@ -20,9 +20,9 @@ public class FileGenerator {
             stringBuilder.append(i);stringBuilder.append(' ');
             int start= random.nextInt(10);
             stringBuilder.append(start);stringBuilder.append(' ');
-            long duration=1+ random.nextInt(1000);
+            long duration=1+ random.nextInt(200);
             stringBuilder.append(duration);stringBuilder.append(' ');
-            int size=random.nextInt(50);
+            int size=random.nextInt(100);
             stringBuilder.append(size);stringBuilder.append(' ');
             for (int j = 0; j <duration; j++) {
                 stringBuilder.append(String.format("%x",random.nextInt(size)));stringBuilder.append(' ');
