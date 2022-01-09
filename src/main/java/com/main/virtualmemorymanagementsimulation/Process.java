@@ -76,8 +76,11 @@ public class Process implements Runnable {
             while (!traces.isEmpty()){
                 lock.lock();
                 runCondition.await();
-                while (mmu.checkDeadLock());
-                mmu.addLock();
+                if (!mmu.checkDeadLock(pid)){
+                    scheduler.releaseLock();
+                    lock.unlock();
+                }
+                mmu.addLock(pid);
                 Main.getLogger().info(String.format("Process %d started.",getPid()));
                 while (scheduler.getCycles()<=runUntil&&!traces.isEmpty()){
                     mmu.requestFrame(new Frame(pid, traces.peek()),runCondition,lock);
@@ -89,7 +92,7 @@ public class Process implements Runnable {
                 if (traces.isEmpty())break;
                 scheduler.addReadyProcess(this);
                 scheduler.releaseLock();
-                mmu.releaseLock();
+
                 lock.unlock();
 
             }
@@ -97,7 +100,7 @@ public class Process implements Runnable {
             Main.getLogger().info(String.format("Process %d finished at %d.",getPid(),end));
             scheduler.processFinished();
             scheduler.releaseLock();
-            mmu.releaseLock();
+            mmu.releaseLock(pid);
             lock.unlock();
         } catch (InterruptedException e) {
             e.printStackTrace();

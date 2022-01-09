@@ -1,6 +1,7 @@
 package com.main.virtualmemorymanagementsimulation;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.concurrent.*;
 import java.util.concurrent.locks.*;
 
@@ -10,12 +11,13 @@ public abstract class MMU extends Thread {
     long readCycles=300;
     protected final int size;
     private final int minimumFrames;
-    private Integer count=0;
+    private final HashSet<Integer> set;
     private final BlockingQueue<Frame> frameQueue;
     private final BlockingQueue<Condition> conditionsQueue;
     private final BlockingQueue<Lock> locksQueue;
     private volatile Scheduler scheduler=null;
     public MMU(int size,int minimumFrames) {
+        set=new HashSet<>();
         this.minimumFrames=minimumFrames;
         this.size=size;
         frames=new Frame[size];
@@ -33,19 +35,19 @@ public abstract class MMU extends Thread {
     public void setReadCycles(long readCycles) {
         this.readCycles = readCycles;
     }
-    public boolean checkDeadLock(){
-        synchronized (count){
-            return count * minimumFrames + minimumFrames > size;
+    public boolean checkDeadLock(int pid){
+        synchronized (set){
+            return set.contains(pid)||set.size()<size/minimumFrames;
         }
     }
-    public void addLock(){
-        synchronized (count){
-            count++;
+    public void addLock(int pid){
+        synchronized (set){
+            set.add(pid);
         }
     }
-    public void releaseLock(){
-        synchronized (count){
-            count--;
+    public void releaseLock(int pid){
+        synchronized (set){
+            set.remove(pid);
         }
     }
     public synchronized void requestFrame(Frame frame,Condition condition,Lock lock) throws InterruptedException {
