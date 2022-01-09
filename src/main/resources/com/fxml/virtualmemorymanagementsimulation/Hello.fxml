@@ -73,12 +73,6 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                 </TableView>
-                <Label layoutX="347.0" layoutY="436.0" text="Click here to check the Memory view" textFill="#e42929">
-                    <font>
-                        <Font size="16.0" />
-                    </font>
-                </Label>
-                <Button layoutX="631.0" layoutY="430.0" mnemonicParsing="false" onAction="#onMemoryViewClick" prefHeight="37.0" prefWidth="105.0" stylesheets="@buttons.css" text="Memory View" />
             </children>
         </Pane>
     </center>

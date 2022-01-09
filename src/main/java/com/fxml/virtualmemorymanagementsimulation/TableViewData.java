@@ -3,7 +3,6 @@ package com.fxml.virtualmemorymanagementsimulation;
 import com.main.virtualmemorymanagementsimulation.Main;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 
@@ -27,7 +26,7 @@ public class TableViewData {
     public  static ArrayList<TableViewData> read() {
         ArrayList<TableViewData> processList=new ArrayList<>();
         for (int i=0;i<Main.processes.length;i++){
-            processList.add(new TableViewData(Main.processes[i].getPid(),  Main.mmu.getCountPageFaults().get(Main.processes[i].getPid()),  Main.processes[i].getStart_time(),Main.processes[i].getEnd(),(Main.processes[i].getEnd()-Main.processes[i].getStart_time()),Main.processes[i].getStart_time()));
+            processList.add(new TableViewData(Main.processes[i].getPid(),  Main.mmu.getCountPageFaults().get(Main.processes[i].getPid()),  Main.processes[i].getStart_time(),Main.processes[i].getEnd(),(Main.processes[i].getEnd()-Main.processes[i].getStart_time()),(Main.processes[i].getEnd()-Main.processes[i].getStart_time())-Main.processes[i].getDuration()));
         }
         return processList;
     }

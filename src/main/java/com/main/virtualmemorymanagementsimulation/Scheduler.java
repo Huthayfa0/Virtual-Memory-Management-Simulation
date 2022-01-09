@@ -5,22 +5,22 @@ import java.util.concurrent.*;
 import java.util.concurrent.locks.*;
 
 public class Scheduler {
-    private Lock lock=new ReentrantLock(true);
-    private Condition condition=lock.newCondition();
+    private final Lock lock=new ReentrantLock(true);
+    private final Condition condition=lock.newCondition();
     private long cycles=0;
     private long timeQuantumInCycles=1000;
     private int contextSwitching=5;
     private long cyclesPerSecond=1000;
-    private MMU mmu;
-    private Process[] processes;
-    private BlockingQueue<Process> readyQueue=new LinkedBlockingQueue<>();
-    private final Executor processesExecutor;
+    private final MMU mmu;
+    private final Process[] processes;
+    private final BlockingQueue<Process> readyQueue=new LinkedBlockingQueue<>();
+
     public Scheduler(MMU mmu, Process[] processes) {
         this.mmu = mmu;
         this.processes = processes;
         mmu.setScheduler(this);
         Arrays.sort(processes, Comparator.comparing(Process::getStart_time));
-        processesExecutor= Executors.newFixedThreadPool(processes.length);
+        Executor processesExecutor = Executors.newFixedThreadPool(processes.length);
         for (Process process : processes) {
             process.setScheduler(this);
             process.setMmu(mmu);
@@ -35,7 +35,7 @@ public class Scheduler {
             while (finishedProcesses < processes.length) {
                 loadProcesses();
                 lock.lock();
-
+                Thread.sleep(100);
                 Process process = readyQueue.take();
                 if (!mmu.checkDeadLock(process.getPid())) {
                     readyQueue.put(process);
@@ -59,12 +59,7 @@ public class Scheduler {
 
     private void loadProcesses() {
         for (int i = loadedProcesses; i < processes.length; i++) {
-            if (processes[i].getStart_time()*360*cyclesPerSecond<=cycles){
-                loadedProcesses++;
-                Main.getLogger().info(String.format("Scheduler: Process %d loaded at %d.",processes[i].getPid(),cycles));
-                addReadyProcess(processes[i]);
-            }else if (readyQueue.isEmpty()){
-                cycles=(long)(processes[i].getStart_time()*360*cyclesPerSecond);
+            if (processes[i].getStart_time()<=cycles){
                 loadedProcesses++;
                 Main.getLogger().info(String.format("Scheduler: Process %d loaded at %d.",processes[i].getPid(),cycles));
                 addReadyProcess(processes[i]);
@@ -109,6 +104,7 @@ public class Scheduler {
     }
     public synchronized void addReadyProcess(Process process){
         try {
+            Main.getLogger().info(String.format("Scheduler: Process %d is ready.",process.getPid()));
             readyQueue.put(process);
         } catch (InterruptedException e) {
             e.printStackTrace();

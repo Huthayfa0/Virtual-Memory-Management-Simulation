@@ -4,9 +4,7 @@ import com.main.virtualmemorymanagementsimulation.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.FileChooser;
@@ -19,15 +17,6 @@ import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
 
-    @FXML
-    protected void onMemoryViewClick() throws IOException {
-        Stage stage=new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("OS-memoryview.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
-    }
     @FXML
     Button Browse;
     @FXML

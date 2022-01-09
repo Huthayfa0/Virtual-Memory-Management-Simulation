@@ -48,6 +48,7 @@ public abstract class MMU extends Thread {
     public void releaseLock(int pid){
         synchronized (set){
             set.remove(pid);
+            Main.getLogger().info("hello "+set.size());
         }
     }
     public synchronized void requestFrame(Frame frame,Condition condition,Lock lock) throws InterruptedException {

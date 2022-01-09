@@ -1,15 +1,13 @@
 package com.main.virtualmemorymanagementsimulation;
 
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-
-import java.io.File;
+import java.io.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.*;
-import java.util.logging.*;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
 public class Main {
-
    public static MMU mmu = null;
    public static Process[] processes;
     private static Logger logger;
@@ -33,7 +31,7 @@ public class Main {
            processes=new Process[n];
             for (int i = 0; i < n; i++) {
                 String[] strings=scanner.nextLine().split(" ");
-                processes[i]=new Process(Integer.parseInt(strings[0]),Double.parseDouble(strings[1]),Double.parseDouble(strings[2]),Integer.parseInt(strings[3]));
+                processes[i]=new Process(Integer.parseInt(strings[0]),Long.parseLong(strings[1]),Long.parseLong(strings[2]),Integer.parseInt(strings[3]));
                 Queue<Integer> traces=processes[i].getTraces();
                 for (int j = 4; j < strings.length; j++) {
                     traces.offer(Integer.parseInt(strings[j],16));

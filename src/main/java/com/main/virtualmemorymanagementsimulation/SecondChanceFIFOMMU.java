@@ -1,7 +1,6 @@
 package com.main.virtualmemorymanagementsimulation;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class SecondChanceFIFOMMU extends MMU{
     private final ArrayList<Integer> secondChance;
@@ -9,7 +8,7 @@ public class SecondChanceFIFOMMU extends MMU{
     public int findFillInFrame(){
         if (secondChance.size()==size){
             int j=0;
-            while (checkBits.get(j)&&j<size) {
+            while (j<size&&checkBits.get(j)) {
                 checkBits.set(j,false);
                 j++;
             }

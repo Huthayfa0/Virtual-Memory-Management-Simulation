@@ -95,6 +95,12 @@
             <artifactId>javafx-graphics</artifactId>
             <version>16</version>
         </dependency>
+        <dependency>
+            <groupId>io.hoplin</groupId>
+            <artifactId>logreader</artifactId>
+            <version>1.1.5</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>

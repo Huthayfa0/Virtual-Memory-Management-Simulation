@@ -5,8 +5,8 @@ import java.util.concurrent.locks.*;
 
 public class Process implements Runnable {
     private final int pid;
-    private final double start_time;
-    private final double duration;
+    private final long start_time;
+    private final long duration;
     private long tracesCount=0;
     private final int size;
     private final Queue<Integer> traces;
@@ -16,7 +16,7 @@ public class Process implements Runnable {
     private long end=-1;
     private final Lock lock=new ReentrantLock(true);
     private final Condition runCondition=lock.newCondition();
-    public Process(int pid, double start_time, double duration, int size) {
+    public Process(int pid, long start_time, long duration, int size) {
         this.pid = pid;
         this.start_time = start_time;
         this.duration = duration;
@@ -35,11 +35,11 @@ public class Process implements Runnable {
         return pid;
     }
 
-    public double getStart_time() {
+    public long getStart_time() {
         return start_time;
     }
 
-    public double getDuration() {
+    public long getDuration() {
         return duration;
     }
 
